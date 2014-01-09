@@ -6,6 +6,10 @@ body {
 
 a {
 	color: #ccc;
+	text-decoration: none;
+}
+a:hover {
+	color: #c0c;
 }
 
 #header {
@@ -20,6 +24,9 @@ a {
 
 #content a {
 	color: #006;
+}
+#content a:hover {
+	color: #c0c;
 }
 
 .section {
@@ -38,6 +45,7 @@ a {
 	vertical-align: top;
 	padding: 5px;
 	background-color: rgba(255, 255, 255, 0.1);
+	margin-bottom: 10px;
 }
 
 .sub-section ul {
