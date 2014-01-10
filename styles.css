@@ -36,8 +36,11 @@ a:hover {
 .section-title {
 	font-size: 1.1em;
 	padding: 2px;
-	border-bottom: 1px solid #333;
-	border-top: 1px solid #333;
+	padding-left: 10px;
+	background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+	margin-bottom: 3px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	/* border-top: 1px solid #333; */
 }
 
 .sub-section {
@@ -58,12 +61,37 @@ a:hover {
 	font-weight: bold;
 }
 
+.sub-section-title {
+	text-align: center;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+hr {
+	width: 90%;
+	margin: 4px auto 4px auto;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 1px;
+}
+
 .section:nth-child(1) {
-	background-color: #966;
+	background-color: hsl(0, 65%, 65%);
 }
 .section:nth-child(2) {
-	background-color: #696;
+	background-color: hsl(120, 65%, 65%);
 }
 .section:nth-child(3) {
-	background-color: #669;
+	background-color: hsl(240, 65%, 65%);
+}
+
+.sub-section {
+	font-size: 0.9em;
+	font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+}
+
+.sigs {
+	position: absolute;
+	background-color: #ccc;
+	padding: 3px;
 }

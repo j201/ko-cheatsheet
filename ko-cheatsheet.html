@@ -13,8 +13,16 @@
 			<div data-bind="foreach: content">
 				<div class="sub-section">
 					<div class="sub-section-title" data-bind="text: title"></div>
+					<hr>
 					<ul data-bind="foreach: content">
-						<li><a data-bind="attr: {href: link}, text: name"></a></li>
+						<li>
+							<a class="ko-link" data-bind="attr: {href: link}, text: name, event: {mouseover: mouseOver, mouseleave: mouseLeave}"></a>
+							<!-- ko if: $data.sigs -->
+							<div class="sigs" data-bind="foreach: sigs, visible: sigsVisible()">
+								<div class="sig" data-bind="text: $data"></div>
+							</div>
+							<!-- /ko -->
+						</li>
 					</ul>
 				</div>
 			</div>
