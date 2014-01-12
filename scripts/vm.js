@@ -5,14 +5,12 @@ var _ = require('underscore');
 apiData.forEach(function(section) {
 	section.content.forEach(function(subSection) {
 		subSection.content.forEach(function(entry) {
-			if (entry.sigs) {
-				entry.sigsVisible = ko.observable(false);
-			}
+			entry.infoVisible = ko.observable(false);
 			entry.mouseOver = function() {
-				if (entry.sigs) entry.sigsVisible(true);
+				if (entry.desc || entry.usage) entry.infoVisible(true);
 			};
 			entry.mouseLeave = function() {
-				if (entry.sigs) entry.sigsVisible(false);
+				entry.infoVisible(false);
 			};
 		});
 	});

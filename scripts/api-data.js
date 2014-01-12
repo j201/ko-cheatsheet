@@ -9,7 +9,8 @@ module.exports =
 					{
 						name: "applyBindings()",
 						link: "http://knockoutjs.com/documentation/observables.html",
-						sigs: ["ko.applyBindings(viewModel, [rootNode])"]
+						desc: "Applies view model bindings to the page or to a given node",
+						usage: ["ko.applyBindings(viewModel, [rootNode])"]
 					}
 				]
 			},
@@ -19,20 +20,21 @@ module.exports =
 					{
 						name: "observable()",
 						link: "http://knockoutjs.com/documentation/observables.html",
-						sigs: ["ko.observable(value) => Observable"]
+						desc: "Returns a value that can notify subscribers upon changes",
+						usage: ["ko.observable(value) => Observable"]
 					},
 					{
 						name: "observableArray()",
 						link: "http://knockoutjs.com/documentation/observableArrays.html",
-						sigs: ["ko.observableArray(array) => ObservableArray"]
+						usage: ["ko.observableArray(array) => ObservableArray"]
 					},
 					{
 						name: "computed()",
 						link: "http://knockoutjs.com/documentation/computedObservables.html",
-						sigs: [
+						usage: [
 							"ko.computed([options]) => Computed",
 							"ko.computed(fn, [context, options]) => Computed",
-							"ko.computed({read: fn, [write: fn, disposeWhenNodeIsRemoved: Node, disposeWhen: fn, owner: any, deferEvaluation: boolean}) => Computed"
+							"ko.computed({read: function, [write: function, disposeWhenNodeIsRemoved: Node, disposeWhen: function, owner: any, deferEvaluation: boolean]}) => Computed"
 						]
 					}
 				]
@@ -56,26 +58,32 @@ module.exports =
 				content: [
 					{
 						name: "visible",
+						desc: "Toggles the element's visibility",
 						link: "http://knockoutjs.com/documentation/visible-binding.html",
 					},
 					{
 						name: "text",
+						desc: "Sets the element's content to the givent text",
 						link: "http://knockoutjs.com/documentation/text-binding.html",
 					},
 					{
 						name: "html",
+						desc: "Sets the inner HTML of the element",
 						link: "http://knockoutjs.com/documentation/html-binding.html",
 					},
 					{
 						name: "css",
+						desc: "Applies a css class to the element",
 						link: "http://knockoutjs.com/documentation/css-binding.html",
 					},
 					{
 						name: "style",
+						desc: "Sets styles on the element",
 						link: "http://knockoutjs.com/documentation/style-binding.html",
 					},
 					{
 						name: "attr",
+						desc: "Sets attributes of the element",
 						link: "http://knockoutjs.com/documentation/attr-binding.html",
 					}
 				],

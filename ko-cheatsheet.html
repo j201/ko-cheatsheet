@@ -10,18 +10,22 @@
 	<div id="content" data-bind="foreach: apiData">
 		<div class="section">
 			<div class="section-title" data-bind="text: title"></div>
-			<div data-bind="foreach: content">
+			<div class="sub-section-container" data-bind="foreach: content">
 				<div class="sub-section">
 					<div class="sub-section-title" data-bind="text: title"></div>
 					<hr>
 					<ul data-bind="foreach: content">
 						<li>
 							<a class="ko-link" data-bind="attr: {href: link}, text: name, event: {mouseover: mouseOver, mouseleave: mouseLeave}"></a>
-							<!-- ko if: $data.sigs -->
-							<div class="sigs" data-bind="foreach: sigs, visible: sigsVisible()">
-								<div class="sig" data-bind="text: $data"></div>
+							<div class="info" data-bind="visible: infoVisible()">
+								<!-- ko if: $data.desc -->
+								<div class="desc" data-bind="text: desc"></div>
+								<!-- /ko -->
+								<!-- ko foreach: $data.usage -->
+									<div class="usage" data-bind="text: $data"></div>
+								<!-- /ko -->
+								</div>
 							</div>
-							<!-- /ko -->
 						</li>
 					</ul>
 				</div>
