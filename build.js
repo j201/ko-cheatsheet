@@ -1,10 +1,15 @@
+// Does build tasks
+// Currently only needs to be run if styles.less is modified
+
 var exec = require('child_process').exec;
 var fs = require('fs');
 
-function logErrors(e) { if (e) console.log(e); }
+function logErrors(prefix) {
+	return function(e) {
+		if(e) console.log(prefix + e);
+	};
+}
 
-exec('browserify scripts/vm.js -o bundle.js', logErrors);
+exec('lessc styles.less styles.css', logErrors('lessc: '));
 
-exec('lessc styles.less styles.css', logErrors);
-
-fs.unlink('nul', function(){});
+fs.unlink('nul', function(){}); // This file shows up for me, and I'm not sure why

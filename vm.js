@@ -1,7 +1,3 @@
-var apiData = require('./api-data');
-var ko = require('knockout');
-var _ = require('underscore');
-
 apiData.forEach(function(section) {
 	section.content.forEach(function(subSection) {
 		subSection.content.forEach(function(entry) {
@@ -12,6 +8,9 @@ apiData.forEach(function(section) {
 			entry.mouseLeave = function() {
 				entry.infoVisible(false);
 			};
+
+			if (entry.usage && !Array.isArray(entry.usage))
+				entry.usage = [entry.usage]; // Hack to make the HTML bindings easier
 		});
 	});
 });
