@@ -50,6 +50,35 @@ var apiData =
 				]
 			},
 			{
+				title: "ObservableArray Methods",
+				content: [
+					{
+						name: "indexOf()",
+						link: "http://knockoutjs.com/documentation/observableArrays.html",
+						desc: "Returns the index of the first element equal to the parameter",
+						usage: "observableArray.indexOf(param) => number"
+					},	
+					{
+						name: "slice()",
+						link: "http://knockoutjs.com/documentation/observableArrays.html",
+						desc: "Returns an array of the elements from a start index to an end index",
+						usage: "observableArray.slice(startIndex, endIndex) => Array"
+					},
+					{
+						name: "push()",
+						link: "http://knockoutjs.com/documentation/observableArrays.html",
+						desc: "Adds an element to the end of the array",
+						usage: "observableArray.push(element)"
+					},
+					{
+						name: "pop()",
+						link: "http://knockoutjs.com/documentation/observableArrays.html",
+						desc: "Removes the last element from the array and returns it",
+						usage: "observableArray.pop() => element"
+					},
+				]
+			},
+			{
 				title: "Low-level",
 				content: [
 					{
